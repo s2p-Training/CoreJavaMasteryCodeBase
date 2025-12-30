@@ -1,46 +1,57 @@
 package section19_OOP_Inner_Class;
 
-// Example-1 Inner Class
-class OuterClass1
+/**
+ *  Topics To Be Covered:
+ *   Types Of Inner Class
+ *      1. Nested Inner Class
+ *      2. Local Inner Class
+ *      3. Anonymous Inner Class
+ *      4. static inner class
+ *
+ *     We can define a class inside another class.
+ *     Outer class can have an inner class inside that is also called as inner class.
+ *     If you have a class and it is becoming very big and complex.
+ *     To reduce the complexity of bigger class. you can deifine the class inside another class.
+ *     We can also deifine interface inside.
+ *
+ *     1. Nested Inner Class :
+ *        a) Inner Class can access the members of outer class (It will be just like global variables for inner class)
+ *        b) We can inner class by creating it's object inside inner class.
+ *        c) Outer class can not access data memebers of inner class directly unless it has created the object of inner class.
+ *        d) It is possible to create the object inner class outside of outer class but it is useless.
+ *        e) For Every class in java, a separte compiled *.class is created, for inner class Outer$Inner.class file created
+ */
+
+class Outer1
 {
-    int x;
-
-    class InnerClass1
-    {
-        int y = 20;
-
-        public void innerDisplay()
-        {
-            // Inner class can access the members of outer class
-            outerDisplay();
-            System.out.println(x);
-            System.out.println(y);
-            System.out.println("Display Method Of Inner Class");
-        }
-    }
-
-
-    public void outerDisplay()
-    {
-        // Outer Class Can Create The Object Of Inner Class
-        // Inside It's Method
-        System.out.println("Display Method Of OuterClass");
-        InnerClass1 inner1 = new InnerClass1();
-
-        // You can not access the features of inner class directly it
-        // can be accessed via object of inner class
-        inner1.innerDisplay();
-        System.out.println(inner1.y);
-    }
+	int x = 12;
+	
+	class Inner1
+	{
+		int y = 17;
+		
+		public void display()
+		{
+			System.out.println("Inner Class : " + x);
+			System.out.println("Inner Class : " + y);
+		}
+	}
+	
+	public void display()
+	{
+		Inner1 inner = new Inner1();
+		inner.display();
+	}
 }
 
-public class Example1
-{
-    public static void main(String[] args)
-    {
-        OuterClass1 outer1 = new OuterClass1();
-        OuterClass1.InnerClass1 inner1 = outer1.new InnerClass1();
-
-        OuterClass1.InnerClass1 inner2 = new OuterClass1().new InnerClass1();
-    }
+public class Example1 {
+	public static void main(String[] args) {
+		
+		Outer1 outer = new Outer1();
+		outer.display();
+		
+		Outer1.Inner1 inner = new Outer1().new Inner1();
+		inner.display();
+		
+	}
 }
