@@ -9,7 +9,8 @@ class Outer3
 {
     public void method1()
     {
-        My instance = new My(){
+        My instance = new My()
+        {
             public void display()
             {
                 System.out.println("Hello People");

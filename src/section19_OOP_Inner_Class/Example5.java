@@ -10,9 +10,20 @@ class Outer5
         public void display()
         {
             System.out.println("Hello People");
+            System.out.println(y);
+            method1();
         }
     }
 
+    public static void method1()
+    {
+        System.out.println("Static Method Of Outer5");
+    }
+
+    public void method2()
+    {
+        System.out.println("Non-Static Method Of Outer5");
+    }
 }
 
 public class Example5

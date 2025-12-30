@@ -9,7 +9,8 @@ public class Example4
 {
     public static void main(String[] args) {
 
-        IMy instance1 = new IMy() {
+        IMy instance1 = new IMy()
+        {
             @Override
             public void display() {
                 System.out.println("Hello Java Virtual Machine");

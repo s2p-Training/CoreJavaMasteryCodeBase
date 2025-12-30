@@ -17,12 +17,15 @@ class Outer2
             void display()
             {
                 System.out.println("Display method Of Local Inner Class");
+                System.out.println(x);
+                System.out.println(y);
             }
         }
 
         Inner2 inner = new Inner2();
         inner.display();
     }
+
 }
 
 public class Example2
