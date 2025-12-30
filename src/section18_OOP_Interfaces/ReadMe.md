@@ -1,17 +1,23 @@
 # Chapter: Interfaces in Java
 
-Interfaces define a **contract** that classes must follow. They specify **what a class should do**, not **how it should do it**. This chapter explains interfaces conceptually and practically using multiple real-world and core Java examples.
+Interfaces define **rules** that classes must follow. Any class that implements an interface **must implement all of its methods**. This chapter explains interfaces purely from a **rule-enforcement and polymorphism** perspective, supported by practical core Java examples.
 
 ---
 
 ## Why Interfaces?
 
+Interfaces are **used to impose rules on a class**.
+
+They define *what methods a class **must implement***. If a class agrees to an interface, it is **forced by the compiler** to follow those rules.
+
+> ⚠️ Interfaces are **NOT primarily for abstraction**.
+> Their **main purpose** is **polymorphism through rule enforcement**.
+
 Interfaces are used to achieve:
 
-- **Abstraction** – hiding implementation details
-- **Loose Coupling** – reducing dependency between components
-- **Multiple Inheritance** – inheriting behavior from multiple sources
-- **Polymorphism** – programming to a contract, not an implementation
+- **Polymorphism** – same interface, different implementations
+- **Loose Coupling** – code depends on interface, not concrete class
+- **Multiple Inheritance** – implementing multiple contracts
 
 An interface is declared using the `interface` keyword and implemented using the `implements` keyword.
 
@@ -190,12 +196,19 @@ Implementing class must implement **all inherited methods**.
 
 ## Summary
 
-- Interfaces are fundamental to clean Java design
-- Enable abstraction, loose coupling, and polymorphism
-- Support multiple inheritance safely
-- Modern Java interfaces support default, static, and private methods
+- Interfaces are used to **impose rules on classes**
+- Any implementing class **must follow those rules**
+- Interfaces are the **foundation of polymorphism in Java**
+- Interface references decide **what can be accessed**
+- Object implementations decide **what gets executed**
+- Interfaces enable **flexible, loosely coupled, and scalable designs**
+
+---
+
+> **One-Line Rule**:
+>
+> **Interfaces are used to impose rules on classes and to achieve polymorphism.**
 
 ---
 
 End of Chapter: **Interfaces**
-
