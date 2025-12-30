@@ -1,4 +1,4 @@
-package section37_Java17_Features.feature_sealed_classes.after_sealed_classes;
+package section38_Java17_Features.feature_sealed_classes.after_sealed_classes;
 
 sealed abstract class ZomatoVehicleServices permits Cycle,Moped, Bike
 {

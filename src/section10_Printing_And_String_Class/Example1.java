@@ -33,7 +33,7 @@ public class Example1
         System.out.print(sData2);
 
         System.out.print("Data Structures");
-        System.out.println("And Algorithm");
+        System.out.print("And Algorithm");
 
     }
 }

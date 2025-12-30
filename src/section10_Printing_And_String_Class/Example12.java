@@ -77,14 +77,20 @@ public class Example12
         System.out.println("Original String : " + sData6);
         System.out.println("Is a website    : " + isWebsite);
 
+        String sData7 = "www.youtube.com";
+        boolean isYoutube = sData7.startsWith("youtube",4);
+
+        System.out.println("Original String : " + sData7);
+        System.out.println("Is A Youtube Website : " + isYoutube);
+
         /*
            EndsWith() method is used to check whether string is ending with particular word
            or not.This method returns boolean value.
          */
-        String sData7 = "www.wikipedia.org";
-        boolean isOrganizationWebsite = sData7.endsWith(".org");
+        String sData8 = "www.wikipedia.org";
+        boolean isOrganizationWebsite = sData8.endsWith(".org");
 
-        System.out.println("Original String              : " + sData7);
+        System.out.println("Original String              : " + sData8);
         System.out.println("Is a organization website    : " + isOrganizationWebsite);
 
     }

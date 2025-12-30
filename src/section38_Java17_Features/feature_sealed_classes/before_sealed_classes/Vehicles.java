@@ -1,4 +1,4 @@
-package section37_Java17_Features.feature_sealed_classes.before_sealed_classes;
+package section38_Java17_Features.feature_sealed_classes.before_sealed_classes;
 
 /*
     purpose of a class hierarchy can be to model various possibilities

@@ -1,4 +1,4 @@
-package section36_java16_features.feature_record_classes.before_records;
+package section37_java16_features.feature_record_classes.before_records;
 
 import java.util.Objects;
 
