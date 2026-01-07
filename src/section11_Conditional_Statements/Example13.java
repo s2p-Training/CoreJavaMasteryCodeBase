@@ -6,56 +6,42 @@ public class Example13
 {
     public static void main(String[] args)
     {
-        // http://www.wikipedia.org
-        // http://www.sourceforge.net
-        // http://www.simple.biz/
-        // http://www.usa.gov/
-        // https, ftp are some protocols
+        int a = 10;
+        int b = 6;
+        int choice;
 
-        System.out.println("Start Of Program");
+        Scanner input = new Scanner(System.in);
 
-        Scanner Input = new Scanner(System.in);
-        String url;
+        System.out.println("Press 1 To Perform Addition");
+        System.out.println("Press 2 To Perform Subtraction");
+        System.out.println("Press 3 To Perform Multiplication");
+        System.out.println("Press 4 To Perform Division");
+        System.out.println("Enter Your Choice : ");
 
-        System.out.println("Enter the website url : ");
-        url = Input.nextLine();
+        choice =  input.nextInt();
 
-        String protocol = url.substring(0,url.indexOf(':'));
-
-        if(protocol.equals("http"))
+        switch (choice)
         {
-            System.out.println("Hyper Text Transfer Protocol");
+            case 1:
+                System.out.println("Performing Addition : " + (a+b));
+                break;
+
+            case 2:
+                System.out.println("Performing Subtraction : " + (a+b));
+                break;
+
+            case 3:
+                System.out.println("Performing Multiplication : " + (a+b));
+                break;
+
+            case 4:
+                System.out.println("Performing Division : " + (a+b));
+                break;
+
+            default:
+                System.out.println("Invalid Key Pressed ...");
+                break;
         }
-        else if(protocol.equals("ftp"))
-        {
-            System.out.println("File Transfer Protocol");
-        }
-
-        String extension = url.substring(url.lastIndexOf(".") + 1);
-
-        if(extension.equals("com"))
-        {
-            System.out.println("Commercial website");
-        }
-        else if(extension.equals("org"))
-        {
-            System.out.println("Organization website");
-        }
-        else if(extension.equals("net"))
-        {
-            System.out.println("Network website");
-        }
-
-        // Also Fetch Website Name
-        int firstIndex = url.indexOf('.') + 1;
-        int lastIndex  = url.lastIndexOf('.');
-        String website = url.substring(firstIndex, lastIndex);
-
-        System.out.println("Website Name " + website);
-
-        Input.close();
-
-        System.out.println("End Of Program");
 
     }
 }
