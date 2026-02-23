@@ -1,64 +1,68 @@
 package section15_OOP_Encapsulation_And_Abstraction;
 
-class MyTelevision
+class MyRectangle
 {
-    private String brandName;
-    private int channelNumber;
-    private  int volume;
-    private boolean isOn;
+    private int length;
+    private int breadth;
 
-    public void turnOnOff()
+    // Getters And Setters
+    public void setLength(int len)
     {
-        isOn = !isOn;
+        if(len > 0)
+        {
+            length = len;
+        }
     }
 
-    public String getBrandName()
+    public int getLength()
     {
-        return brandName;
+        return length;
     }
 
-    public void setBrandName(String brand)
+    public void setBreadth(int bre)
     {
-        brandName = brand;
+        if(bre > 0)
+        {
+            breadth = bre;
+        }
     }
 
-    public int getChannelNumber() {
-        return channelNumber;
+    public int getBreadth() {
+        return breadth;
     }
 
-    public void setChannelNumber(int channelNumber) {
-        this.channelNumber = channelNumber;
+    public int area()
+    {
+        int a = length * breadth;
+        return a;
     }
 
-    public int getVolume() {
-        return volume;
+    public int perimeter()
+    {
+        int p = 2 * (length + breadth);
+        return p;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public boolean isOn() {
-        return isOn;
-    }
-
-    public void setOn(boolean on) {
-        isOn = on;
-    }
 }
 
 public class Example5
 {
     public static void main(String[] args)
     {
-        MyTelevision television = new MyTelevision();
-        television.setBrandName("Samsung");
-        television.setOn(true);
-        television.setVolume(10);
-        television.setChannelNumber(3);
+        MyRectangle r1 = new MyRectangle();
+        r1.setLength(10);
+        r1.setBreadth(5);
 
-        System.out.println(television.getBrandName());
-        System.out.println(television.getChannelNumber());
-        System.out.println(television.getVolume());
+        int len = r1.getLength();
+        System.out.println("Length " + len);
+
+        int bre = r1.getBreadth();
+        System.out.println("Breadth : " + bre);
+
+        int a = r1.area();
+
+        System.out.println("Area : " + a);
+        System.out.println("Perimeter : " + r1.perimeter());
+
     }
 }
