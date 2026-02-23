@@ -1,4 +1,4 @@
-package section19_OOP_Inner_Class;
+package section20_OOP_Inner_Class;
 
 /**
  *  Topics To Be Covered:
@@ -29,7 +29,7 @@ class Outer1
 	class Inner1
 	{
 		int y = 17;
-		
+
 		public void display()
 		{
 			System.out.println("Inner Class : " + x);
@@ -49,9 +49,12 @@ public class Example1 {
 		
 		Outer1 outer = new Outer1();
 		outer.display();
-		
-		Outer1.Inner1 inner = new Outer1().new Inner1();
-		inner.display();
+
+		Outer1.Inner1 inner1 = outer.new Inner1();
+		inner1.display();
+
+		Outer1.Inner1 inner2 = new Outer1().new Inner1();
+		inner2.display();
 		
 	}
 }

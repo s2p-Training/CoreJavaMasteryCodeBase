@@ -1,22 +1,36 @@
 package section6_Data_Types_Variables_And_Literals;
 
-import java.util.Scanner;
-
 public class Example1 {
     public static void main(String[] args) {
 
-        Scanner Input = new Scanner(System.in);
-        int a;
-        int b;
-        int c;
+        // Variable Declaration
+        byte lbNum1;
+        short lsNum1;
+        int lnNum1;
+        long llNum1;
 
-        System.out.println("Enter a number-1 : ");
-        a = Input.nextInt();
+        float lfNum1;
+        double ldNum1;
 
-        System.out.println("Enter a number-2 : ");
-        b = Input.nextInt();
+        char cGrade;
 
-        c = a + b;
-        System.out.println("Sum : " + c);
+        boolean isPrime;
+
+        String sName;
+
+        // Variable Assignment
+        lbNum1 = 120;
+        lsNum1 = 32000;
+        lnNum1 = 330000;
+        llNum1 = 2000000000L;
+
+        lfNum1 = 12.1212121212121212121212f;
+        ldNum1 = 12.1212121212121212121212;
+
+        cGrade = 'A';
+        sName  = "Java Full Stack Means S2P";
+
+        // Can You Print All Variables ?
+//        System.out.println(lbNum1);
     }
 }

@@ -1,4 +1,4 @@
-package section19_OOP_Inner_Class;
+package section20_OOP_Inner_Class;
 
 class Outer2
 {

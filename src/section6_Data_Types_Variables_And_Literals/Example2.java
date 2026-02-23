@@ -1,23 +1,28 @@
 package section6_Data_Types_Variables_And_Literals;
 
-import java.util.Scanner;
+public class Example2
+{
+    public static void main(String[] args)
+    {
+        // Introduction To Wrapper Classes
 
-public class Example2 {
-    public static void main(String[] args) {
+        // Byte Wrapper Class
+        System.out.println("Minimum Value Stored Inside The Byte Data Type : " + Byte.MIN_VALUE);
+        System.out.println("Maximum Value Stored Inside The Byte Data Type : " + Byte.MAX_VALUE);
+        System.out.println("Size For Byte Data Type In Bits  : " + Byte.SIZE);
+        System.out.println("Size For Byte Data Type In Bytes : " + Byte.BYTES);
 
-        Scanner Input = new Scanner(System.in);
-        String sName;
-        String sLineAboutYou;
+        // Using Byte Wrapper Class Reference
 
-        // next() method is used to read single word from keyboard
-        System.out.println("Hello, May I Know Your Name : ");
-        sName = Input.next();
+        Byte b1 = null;
+        b1 = Byte.parseByte("65");
+        System.out.println(b1);
 
-        // nextLine() method is used to read multiple words from keyboard
-        System.out.println("Can You Describe Yourself In A Single Line");
-        sLineAboutYou = Input.nextLine();
+        Byte b2 = 16;
+        Byte b3 = 19;
 
-        System.out.println("Hello, " + sName);
-        System.out.println("Wow That's Some Hard Stuff : " + sLineAboutYou);
+        int result = Byte.compare(b2,b3);
+        System.out.println("Difference : " + result);
+
     }
 }
