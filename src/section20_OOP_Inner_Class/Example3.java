@@ -1,25 +1,32 @@
 package section20_OOP_Inner_Class;
 
-abstract class My
-{
-    public abstract void display();
-}
-
-class Outer3
-{
-    public void method1()
+    abstract class My
     {
-        My instance = new My()
-        {
-            public void display()
-            {
-                System.out.println("Hello People");
-            }
-        };
-
-        instance.display();
+        public abstract void display();
     }
-}
+
+    class Outer3
+    {
+        int x = 12;
+
+        public void method1()
+        {
+            int y = 100;
+
+            My instance = new My()
+            {
+                public void display()
+                {
+                    System.out.println(x);
+                    System.out.println(y);
+                    // y++; // y is effectively final
+                    System.out.println("Hello People");
+                }
+            };
+
+            instance.display();
+        }
+    }
 
 public class Example3
 {
